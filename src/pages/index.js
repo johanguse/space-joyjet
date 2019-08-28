@@ -13,14 +13,10 @@ import '../styles/styles.scss';
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    < Button buttonText = "Click me" / >
+    <Button buttonText = "Click" />
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
 
