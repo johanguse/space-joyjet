@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
-
+import Img from 'gatsby-image';
 
 
 function BlogSection() {
@@ -15,12 +15,14 @@ function BlogSection() {
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 return (
-                  <Link to={node.fields.slug}>
-                    <div
-                      className="mdc-card--clickable anoun-blog-card"
-                      key={node.fields.slug}
-                    >
+                  <Link to={node.fields.slug}
+                  key={node.fields.slug}
+                  >
+                    <div className="mdc-card--clickable anoun-blog-card">
                         <div className="anoun-blog-card-content__container">
+                          <Img
+                            fixed={node.frontmatter.thumbnail.childImageSharp.fixed}
+                          />
                           <h3>{title}</h3>
                           <small>{node.frontmatter.date}</small>
                           <p
@@ -56,6 +58,13 @@ const blogPostQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            thumbnail {
+              childImageSharp {
+                fixed(width: 200, height: 200) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
           }
         }
       }
