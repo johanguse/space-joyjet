@@ -1,0 +1,25 @@
+{
+  "treading": [
+    {
+      "date": "2018-08",
+      "description":
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. "
+    },
+    {
+      "date": "2018-09",
+      "description":
+        "Assumenda cum laborum iure nam in accusantium."
+    }
+  ],
+  "features": [
+      {
+          "title": "Prepare a coffee"
+      },
+      {
+          "title": "Run: `npm i` to install the dependencies"
+      },
+      {
+          "title": "Start coding!"
+      }
+  ]
+}
