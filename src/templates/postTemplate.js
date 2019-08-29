@@ -10,7 +10,7 @@ const PostTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Home"
+        title={frontmatter.title}
       />
       <section>
         <div>

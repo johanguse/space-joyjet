@@ -18,7 +18,7 @@ const BlogPage = ({ data, pageContext }) => {
   const nextPage = `${pathPrefix}/${(currentPage + 1).toString()}`;
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />
       <div className="post-list">
         {posts.map(post => (
           <div key={post.node.id} className="post-list__item">
