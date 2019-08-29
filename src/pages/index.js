@@ -6,7 +6,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import Button from "../components/button"
 import BlogSection from "../components/blogSection"
-
+import StyledBackgroundSection from "../components/bgImg"
 
 import '../styles/styles.scss';
 
@@ -18,6 +18,7 @@ const IndexPage = () => (
       <Image />
     </div>
     <BlogSection />
+    <StyledBackgroundSection />
   </Layout>
 )
 
