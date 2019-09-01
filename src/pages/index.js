@@ -13,12 +13,14 @@ import '../styles/styles.scss';
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Button buttonText = "Click" />
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <BlogSection />
     <StyledBackgroundSection />
+    <div className="container">
+      <Button buttonText = "Click" />
+      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+        <Image />
+      </div>
+      <BlogSection />
+    </div>
   </Layout>
 )
 

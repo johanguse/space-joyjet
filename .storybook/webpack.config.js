@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = ({config: defaultConfig, mode}) => {
   // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
   defaultConfig.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/]
@@ -18,6 +20,13 @@ module.exports = ({config: defaultConfig, mode}) => {
 
   // Prefer Gatsby ES6 entrypoint (module) over commonjs (main) entrypoint
   defaultConfig.resolve.mainFields = ["browser", "module", "main"]
+
+  // SASS
+  defaultConfig.module.rules.push({
+    test: /\.scss$/,
+    use: ['style-loader', 'css-loader', 'sass-loader'],
+    include: path.resolve(__dirname, '../'),
+  });
 
   return defaultConfig
 }
