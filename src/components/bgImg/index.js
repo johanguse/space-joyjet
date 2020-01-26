@@ -25,7 +25,9 @@ const StyledBackgroundSection = ({ className }) => (
                               fluid={imageData}
                               backgroundColor={`#040e18`}
             >
-              <h1>Hello gatsby-background-image</h1>
+              <div className="container">
+                <h1>Hello gatsby-background-image</h1>
+              </div>
             </BackgroundImage>
         )
       }

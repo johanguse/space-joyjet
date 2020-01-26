@@ -10,7 +10,7 @@ function BlogSection() {
       render={data => {
         const posts = data.allMarkdownRemark.edges
         return (
-          <section className="page-main__section">
+          <section className="container page-main__section">
             <div className="blog-posts__container">
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug

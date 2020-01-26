@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-        <div className="container-fluid px-0">
+        <div className="container-fluid">
           {children}
         </div>
       <Footer />

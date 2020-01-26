@@ -19,7 +19,7 @@ const BlogPage = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />
-      <div className="post-list">
+      <div className="container post-list">
         {posts.map(post => (
           <div key={post.node.id} className="post-list__item">
             <div className="post-list__thumbnail">
@@ -52,28 +52,29 @@ const BlogPage = ({ data, pageContext }) => {
             </div>
           </div>
         ))}
-      </div>
-      <div className="page-navigation">
-        {!isFirst && (
-          <Link to={prevPage} rel="prev">
-            ← Previous Page
-          </Link>
-        )}
+      
+        <div className="page-navigation">
+          {!isFirst && (
+            <Link to={prevPage} rel="prev">
+              ← Previous Page
+            </Link>
+          )}
 
-        {Array.from({ length: numPages }, (_, i) => (
-          <Link
-            key={`pagination-number${i + 1}`}
-            to={`${pathPrefix}/${i === 0 ? '' : i + 1}`}
-          >
-            {i + 1}
-          </Link>
-        ))}
+          {Array.from({ length: numPages }, (_, i) => (
+            <Link
+              key={`pagination-number${i + 1}`}
+              to={`${pathPrefix}/${i === 0 ? '' : i + 1}`}
+            >
+              {i + 1}
+            </Link>
+          ))}
 
-        {!isLast && (
-          <Link to={nextPage} rel="next">
-            Next Page →
-          </Link>
-        )}
+          {!isLast && (
+            <Link to={nextPage} rel="next">
+              Next Page →
+            </Link>
+          )}
+        </div>
       </div>
     </Layout>
   );

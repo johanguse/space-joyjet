@@ -12,12 +12,14 @@ const PostTemplate = ({ data }) => {
       <SEO
         title={frontmatter.title}
       />
-      <section>
-        <div>
-          <h1>{frontmatter.title}</h1>
-          <span>{frontmatter.date}</span>
+      <section className="container">
+        <div className="blog-content">
+          <div>
+            <h1>{frontmatter.title}</h1>
+            <span>{frontmatter.date}</span>
+          </div>
+          <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
       </section>
     </Layout>
   );
