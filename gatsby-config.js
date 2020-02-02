@@ -42,7 +42,26 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/joyjet-icon.png`, // This path is relative to the root of the site.
       },
-    }, 
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages/blog`,
+      },
+    },
     //{
     //  resolve: 'gatsby-plugin-react-svg',
     //  options: {
