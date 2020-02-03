@@ -23,7 +23,7 @@ const IndexPage = () => (
       <BlogSection />
     </div>
     <div className="container">
-      <Slickslider />
+      sss
     </div>
   </Layout>
 )
