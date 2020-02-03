@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import Button from "../components/button"
 import BlogSection from "../components/blogSection"
 import StyledBackgroundSection from "../components/bgImg"
-import Slickslider from "../components/slider"
+//import Slickslider from "../components/slider"
 
 import '../styles/styles.scss';
 

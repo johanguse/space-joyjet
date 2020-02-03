@@ -1,7 +1,7 @@
+import React from 'react'
 import { Link } from 'gatsby'
-import React, { Component } from 'react';
 import './_header.scss'
-import styled from 'styled-components'
+//import styled from 'styled-components'
 
 import Logo from "../../components/logo"
 
@@ -36,9 +36,9 @@ class Header extends React.Component {
   }
 
   render() {
-    const { children } = this.props
+    //const { children } = this.props
     return (
-      <nav className="container navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="container navbar navbar-expand-lg py-4 navbar-joyjet">
         <Logo className="navbar-brand" siteTitle={this.props.siteTitle} />
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
