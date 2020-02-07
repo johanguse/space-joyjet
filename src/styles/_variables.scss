@@ -1,0 +1,38 @@
+// Variable overrides
+$font-family-base: 'Poppins', sans-serif;
+$body-bg: #f8f8f8;
+$body-color: #111;
+$color_main: #f04e30;
+$color_border: #e3e3e3;
+$color_text: #4f6072;
+$color_light_text: #4f6072;
+$color_dark_text: #4f6072;
+
+$font-size-base: 1.5rem;
+
+$primary: #4a90e2;
+
+
+
+:root {
+  --white: #ffffff;
+  --blue: #4a90e2;
+}
+
+$grid-breakpoints: (
+	xs: 0,
+	xx: 375px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1590px
+);
+$container-max-widths: (
+	xx: 374px,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1560px
+);

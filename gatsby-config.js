@@ -62,6 +62,17 @@ module.exports = {
         path: `${__dirname}/src/pages/blog`,
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Poppins`,
+            variants: [`400`, `700`]
+          },
+        ],
+      },
+    },
     //{
     //  resolve: 'gatsby-plugin-react-svg',
     //  options: {
