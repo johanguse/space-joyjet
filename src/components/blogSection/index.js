@@ -1,9 +1,17 @@
 import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
-import Img from 'gatsby-image';
+import Slider from "react-slick"
+import Img from "gatsby-image"
 
 
 function BlogSection() {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1
+  };
   return (
     <StaticQuery
       query={blogPostQuery}
@@ -12,6 +20,7 @@ function BlogSection() {
         return (
           <section className="container page-main__section">
             <div className="blog-posts__container">
+              <Slider {...settings}>
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 return (
@@ -36,6 +45,7 @@ function BlogSection() {
                   </Link>
                 )
               })}
+              </Slider>
             </div>
           </section>
         )

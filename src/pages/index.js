@@ -15,13 +15,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <StyledBackgroundSection />
-    <div className="container">
-      <Button buttonText = "Click" />
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div>
-      <BlogSection />
-    </div>
+    <BlogSection />
     <div className="container">
       <Slickslider />
     </div>

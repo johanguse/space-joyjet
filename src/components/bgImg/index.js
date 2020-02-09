@@ -10,7 +10,7 @@ const StyledBackgroundSection = ({ className }) => (
       query {
         desktop: file(relativePath: { eq: "bg-space-dark.jpg" }) {
           childImageSharp {
-            fluid(quality: 60, maxWidth: 4160) {
+            fluid(quality: 60, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -27,7 +27,7 @@ const StyledBackgroundSection = ({ className }) => (
                               backgroundColor={`#040e18`}
             >
               <div className="container">
-                <div className="hero-joyjet d-inline-flex pl-3">
+                <div className="hero-joyjet d-inline-flex">
                   <h1 className="title-hero">Space<span className="blue-dot">.</span></h1>
                   <p className="subtitle-hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />Quisque molestie elit at lacus…</p>
                   <Button buttonText = "Click" />
@@ -35,7 +35,27 @@ const StyledBackgroundSection = ({ className }) => (
               </div>
               <div className="container-fluid trending-today d-flex align-items-end">
                 <div className="container">
-                  aaa
+                  <div className="trending-today-container">
+                    <h3 className="trending-today-title">
+                      Treading<br />
+                      <span>Today</span>
+                    </h3>
+                    <div className="trending-today-item">
+                    Lorem ipsum dolor sit amet,
+                    consectetuer adipiscing
+                    ligula eget dolor.
+                    </div>
+                    <div className="trending-today-item">
+                    Lorem ipsum dolor sit amet,
+                    consectetuer adipiscing
+                    ligula eget dolor.
+                    </div>
+                    <div className="trending-today-item">
+                    Lorem ipsum dolor sit amet,
+                    consectetuer adipiscing
+                    ligula eget dolor.
+                    </div>
+                  </div>
                 </div>
               </div>
             </BackgroundImage>
