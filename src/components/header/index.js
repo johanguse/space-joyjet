@@ -7,6 +7,34 @@ import Logo from "../../components/logo"
 
 
 class Header extends React.Component {
+  constructor (props) {
+    super(props);
+    //this.toggle = this.toggleNavbar.bind(this);
+
+    // https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
+    if (typeof window !== 'undefined') {
+      let prevScrollpos = window.pageYOffset;
+      window.onscroll = function () {
+        const maxScroll = document.body.clientHeight - window.innerHeight;
+        let currentScrollPos = window.pageYOffset;
+        if (
+            (maxScroll > 25 && prevScrollpos > currentScrollPos && prevScrollpos <= maxScroll) 
+          || (maxScroll <= 25 && prevScrollpos > currentScrollPos)
+          || (prevScrollpos <= 25 && currentScrollPos <= 25)
+          ) {
+          document.getElementById("navbar").classList.remove("active");
+          console.log(currentScrollPos);
+        } else {
+          console.log(currentScrollPos);
+          document.getElementById("navbar").classList.add("active");
+          //document.getElementById("navbar").style.top = "-5.0rem"; // adjustable based your need
+        }
+        prevScrollpos = currentScrollPos;
+      }
+    }
+  }
+
+  /*
   state = {
     active: "top"
   };
@@ -17,7 +45,7 @@ class Header extends React.Component {
 
       this.setState({ active: !this.state.active });
     });
-  }
+  }*/
   
 /*
   componentWillUnmount() {
@@ -38,15 +66,18 @@ class Header extends React.Component {
       console.log(scrollPos);
       this.setState({active: !this.state.active});
     }
-  }*/
+  }
+  <nav className={`navbar fixed-top navbar-expand-lg py-4 navbar-joyjet ${this.state.active ? "active" : "top"}`}
+
+        >
+  
+  */
 
   render() {
     //const { children } = this.props
     return (
       <header className="header">
-        <nav className={`navbar fixed-top navbar-expand-lg py-4 navbar-joyjet ${this.state.active ? "active" : "top"}`}
-
-        >
+        <nav className="navbar fixed-top navbar-expand-lg py-4 navbar-joyjet" id="navbar">
           <div className="container">
             <Logo className="navbar-brand" siteTitle={this.props.siteTitle} />
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
