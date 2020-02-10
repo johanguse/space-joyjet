@@ -4,7 +4,7 @@ import React from 'react'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogSection from "../components/blogSection"
-import StyledBackgroundSection from "../components/bgImg"
+import StyledBackgroundSection from "../components/homeBanner"
 import About from "../components/about"
 
 import '../styles/styles.scss';
