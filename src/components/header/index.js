@@ -17,17 +17,13 @@ class Header extends React.Component {
       window.onscroll = function () {
         const maxScroll = document.body.clientHeight - window.innerHeight;
         let currentScrollPos = window.pageYOffset;
-        if (
-            (maxScroll > 25 && prevScrollpos > currentScrollPos && prevScrollpos <= maxScroll) 
-          || (maxScroll <= 25 && prevScrollpos > currentScrollPos)
-          || (prevScrollpos <= 25 && currentScrollPos <= 25)
-          ) {
+        if (currentScrollPos <= 25) {
           document.getElementById("navbar").classList.remove("active");
-          console.log(currentScrollPos);
+          //document.getElementById("navbar").style.top = "-5rem";
         } else {
           console.log(currentScrollPos);
           document.getElementById("navbar").classList.add("active");
-          //document.getElementById("navbar").style.top = "-5.0rem"; // adjustable based your need
+          //document.getElementById("navbar").style.top = "0rem";
         }
         prevScrollpos = currentScrollPos;
       }
