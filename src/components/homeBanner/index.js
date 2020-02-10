@@ -22,12 +22,12 @@ const StyledBackgroundSection = ({ className }) => (
         const imageData = data.desktop.childImageSharp.fluid
         return (
             <BackgroundImage Tag="section"
-                              className="hero-bg-img"
+                              className="home-hero"
                               fluid={imageData}
                               backgroundColor={`#040e18`}
             >
               <div className="container">
-                <div className="hero-joyjet d-inline-flex">
+                <div className="hero-joyjet">
                   <h1 className="title-hero">Space<span className="blue-dot">.</span></h1>
                   <p className="subtitle-hero">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />Quisque molestie elit at lacus…</p>
                   <Button buttonText = "Click" />

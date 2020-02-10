@@ -7,21 +7,25 @@ import Logo from "../../components/logo"
 
 
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      show: true,
-      scrollPos: 0
-    };
-    this.handleScroll = this.handleScroll.bind(this);
-  }
+  state = {
+    active: "top"
+  };
 
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  }
+    document.addEventListener("scroll", () => {
+      const active = window.scrollY < 70 ? "active" : "top";
 
+      this.setState({ active: !this.state.active });
+    });
+  }
+  
+/*
   componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  toggle() {
+    this.setState({addClass: !this.state.addClass});
   }
 
   handleScroll() {
@@ -31,40 +35,45 @@ class Header extends React.Component {
       show: document.body.getBoundingClientRect().top > scrollPos
     });
     if(scrollPos <= -175){
-    console.log(scrollPos);
+      console.log(scrollPos);
+      this.setState({active: !this.state.active});
     }
-  }
+  }*/
 
   render() {
     //const { children } = this.props
     return (
-      <nav className="container-fluid navbar navbar-expand-lg py-4 navbar-joyjet">
-        <div className="container">
-          <Logo className="navbar-brand" siteTitle={this.props.siteTitle} />
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item active">
-                <Link to="/blog" activeClassName="active">Blog</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/about" activeClassName="active">Popular</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/tags" activeClassName="active">Archive</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="#about-us" activeClassName="active">About</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/projects" activeClassName="active">Projects</Link>
-              </li>
-            </ul>
+      <header className="header">
+        <nav className={`navbar fixed-top navbar-expand-lg py-4 navbar-joyjet ${this.state.active ? "active" : "top"}`}
+
+        >
+          <div className="container">
+            <Logo className="navbar-brand" siteTitle={this.props.siteTitle} />
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item active">
+                  <Link to="/blog" activeClassName="active">Blog</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/about" activeClassName="active">Popular</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/tags" activeClassName="active">Archive</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="#about-us" activeClassName="active">About</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/projects" activeClassName="active">Projects</Link>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </header>
     )
   }
 }
