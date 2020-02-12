@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 
 
 function SlickNextArrow(props) {
-  const { className, onClick } = props;
+  const { onClick } = props;
   return (
     <button type='button' className='slick-next pull-right'
     onClick={onClick}
@@ -16,7 +16,7 @@ function SlickNextArrow(props) {
 }
 
 function SlickPrevArrow(props) {
-  const { className, onClick } = props;
+  const { onClick } = props;
   return (
     <button type='button' className='slick-prev pull-left'
     onClick={onClick}
@@ -50,7 +50,8 @@ function BlogSection() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: true
+          dots: true,
+          arrows: false,
         }
       }
     ]

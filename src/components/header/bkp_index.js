@@ -7,7 +7,6 @@ import Logo from "../../components/logo"
 class Header extends React.Component {
   constructor (props) {
     super(props);
-    this.state = { isOpen: false };
 
     if (typeof window !== 'undefined') {
       //let prevScrollpos = window.pageYOffset;
@@ -26,29 +25,13 @@ class Header extends React.Component {
     }
   }
 
-  toggleMenu() {
-    
-    console.log( this.state.isOpen );
-    if (this.state.isOpen===true) {
-      document.getElementById("BtnNavbarNavDropdown").classList.add("collapsed");
-      document.getElementById("navbarNavDropdown").classList.remove("show");
-    } else {
-      document.getElementById("BtnNavbarNavDropdown").classList.remove("collapsed");
-      document.getElementById("navbarNavDropdown").classList.add("show");
-    }
-    this.setState({ isOpen: !this.state.isOpen });
-  }
-
   render() {
     return (
       <header className="header">
         <nav className="navbar fixed-top navbar-expand-lg py-4 navbar-joyjet" id="navbar">
           <div className="container">
             <Logo className="navbar-brand" siteTitle={this.props.siteTitle} />
-            <button className="navbar-toggler navbar-toggler-right collapsed"
-            onClick={() => this.toggleMenu()}
-            type="button" data-toggle="collapse" id="BtnNavbarNavDropdown"
-            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Menu">
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Menu">
               <span className="icon-bar top-bar"></span>
               <span className="icon-bar middle-bar"></span>
               <span className="icon-bar bottom-bar"></span>
