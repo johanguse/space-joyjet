@@ -25,5 +25,7 @@ import './node_modules/bootstrap/scss/_images.scss'
 import './node_modules/bootstrap/scss/_code.scss'
 import './node_modules/bootstrap/scss/_grid.scss'
 */
+import "./src/styles/styles.scss"
+
 require('prismjs/themes/prism-tomorrow.css');
 require('prismjs/plugins/line-numbers/prism-line-numbers.css');

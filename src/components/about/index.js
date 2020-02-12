@@ -1,6 +1,5 @@
 import React from "react"
 import ImageAboutUs from './about-image'
-import './_about.scss';
 
 const About = () => (
   <section id="about-us" className="container about-us">

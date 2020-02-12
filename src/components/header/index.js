@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import './_header.scss'
 
 import Logo from "../../components/logo"
 

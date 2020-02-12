@@ -2,7 +2,7 @@ import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Slider from "react-slick"
 import Img from "gatsby-image"
-import './_blogSection.scss';
+
 
 function SlickNextArrow(props) {
   const { className, onClick } = props;
@@ -39,7 +39,15 @@ function BlogSection() {
     prevArrow: <SlickPrevArrow />,
     responsive: [
       {
-        breakpoint: 600,
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -65,7 +73,7 @@ function BlogSection() {
                   >
                     <div className="blog-section-card">
                         <div className="blog-section-content__container">
-                          <Img
+                          <Img className="img-fluid blog-section-content__container-img"
                             fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
                           />
                           <div className="blog-section-content__container-text">

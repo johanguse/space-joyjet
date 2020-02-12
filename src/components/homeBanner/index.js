@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import Button from "../button"
-import './_bgImg.scss';
 
 import BackgroundImage from 'gatsby-background-image'
 
