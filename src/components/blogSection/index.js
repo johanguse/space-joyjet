@@ -54,8 +54,8 @@ function BlogSection() {
       render={data => {
         const posts = data.allMarkdownRemark.edges
         return (
-          <section className="container page-main__section">
-            <div className="blog-posts__container">
+          <section className="container blog-section">
+            <div className="blog-container-section">
               <Slider {...settings}>
               {posts.map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
@@ -63,19 +63,20 @@ function BlogSection() {
                   <Link to={node.fields.slug}
                   key={node.fields.slug}
                   >
-                    <div className="mdc-card--clickable anoun-blog-card">
-                        <div className="anoun-blog-card-content__container">
+                    <div className="blog-section-card">
+                        <div className="blog-section-content__container">
                           <Img
-                            fixed={node.frontmatter.thumbnail.childImageSharp.fixed}
+                            fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
                           />
-                          <h3>{title}</h3>
-                          <small>{node.frontmatter.date}</small>
-                          <p
-                            dangerouslySetInnerHTML={{
-                              __html:
-                                node.frontmatter.description || node.excerpt,
-                            }}
-                          />
+                          <div className="blog-section-content__container-text">
+                            <h3>{title}</h3>
+                            <p
+                              dangerouslySetInnerHTML={{
+                                __html:
+                                  node.frontmatter.description || node.excerpt,
+                              }}
+                            />
+                          </div>
                         </div>
                     </div>
                   </Link>
@@ -93,21 +94,20 @@ function BlogSection() {
 const blogPostQuery = graphql`
   query BlogPostQuery {
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: {order: DESC, fields: frontmatter___date}
     ) {
       edges {
         node {
-          excerpt
+          excerpt(pruneLength: 90)
           fields {
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
             thumbnail {
               childImageSharp {
-                fixed(width: 200, height: 200) {
-                  ...GatsbyImageSharpFixed
+                fluid(maxWidth: 400) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
