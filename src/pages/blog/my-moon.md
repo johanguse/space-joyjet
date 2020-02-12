@@ -1,7 +1,7 @@
 ---
 title: My moon
 date: 2019-10-30
-thumbnail: "../../images/kitten-2.jpeg"
+thumbnail: "../../images/moon.jpg"
 tags: ['cat']
 ---
 

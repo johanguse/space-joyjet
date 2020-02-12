@@ -42,8 +42,7 @@ function BlogSection() {
         breakpoint: 992,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
-          dots: true
+          slidesToScroll: 1
         }
       },
       {
@@ -70,6 +69,7 @@ function BlogSection() {
                 return (
                   <Link to={node.fields.slug}
                   key={node.fields.slug}
+                  className="blog-section-card-link"
                   >
                     <div className="blog-section-card">
                         <div className="blog-section-content__container">
@@ -77,8 +77,9 @@ function BlogSection() {
                             fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
                           />
                           <div className="blog-section-content__container-text">
-                            <h3>{title}</h3>
+                            <h3 className="blog-section-content__container-title">{title}</h3>
                             <p
+                              className="blog-section-content__container-excerpt"
                               dangerouslySetInnerHTML={{
                                 __html:
                                   node.frontmatter.description || node.excerpt,

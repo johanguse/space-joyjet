@@ -4,10 +4,10 @@ import ImageAboutUs from './about-image'
 const About = () => (
   <section id="about-us" className="container about-us">
     <div className="row">
-        <div className="col-4">
+        <div className="col-lg-4 col-md-12">
           <ImageAboutUs />
         </div>
-        <div className="col-8">
+        <div className="col-lg-8 col-md-12">
           <h4 className="about-title">About us</h4>
           <p className="about-text">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.

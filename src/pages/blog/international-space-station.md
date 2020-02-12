@@ -1,7 +1,7 @@
 ---
 title: International Space Station
 date: 2020-02-02
-thumbnail: "../../images/kitten-1.jpeg"
+thumbnail: "../../images/isp.jpg"
 tags: ['cat', 'kitten', 'javascript']
 ---
 

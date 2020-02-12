@@ -1,7 +1,7 @@
 ---
 title: My capsule
 date: 2019-12-31
-thumbnail: "../../images/kitten-3.jpeg"
+thumbnail: "../../images/capsule.jpg"
 ---
 
 Lorem ipsum dolor sit amet,

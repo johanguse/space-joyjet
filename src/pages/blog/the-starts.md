@@ -1,7 +1,7 @@
 ---
 title: The Stars
 date: 2018-08-02
-thumbnail: "../../images/kitten-3.jpeg"
+thumbnail: "../../images/stars.jpg"
 ---
 
 Lorem ipsum dolor sit amet,
