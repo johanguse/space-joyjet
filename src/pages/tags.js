@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby';
 import { kebabCase } from 'lodash';
 
 import Layout from '../components/layout';
+import HeaderInterns from "../components/header/index2"
 import SEO from '../components/seo';
 
 const TagsPage = ({ data }) => {
@@ -12,6 +13,7 @@ const TagsPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <HeaderInterns />
       <div className="container pages-interns">>
         <h1>Tags</h1>
         <ul>

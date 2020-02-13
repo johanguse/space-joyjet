@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
+import HeaderInterns from "../components/header/index2"
 import SEO from '../components/seo';
 import Img from 'gatsby-image';
 import Button from '../components/button';
@@ -11,6 +12,7 @@ const ProjectsPage = ({ data }) => (
       title="Home"
       keywords={[`gatsby`, `application`, `react`, `portfolio`]}
     />
+    <HeaderInterns />
     <div className="container pages-interns">
       <h1>Projects</h1>
       <div className="project-list">

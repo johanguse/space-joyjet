@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
+import HeaderInterns from "../components/header/index2"
 import SEO from '../components/seo';
 
 const PostTemplate = ({ data }) => {
@@ -12,6 +13,7 @@ const PostTemplate = ({ data }) => {
       <SEO
         title={frontmatter.title}
       />
+      <HeaderInterns />
       <section className="container pages-interns">
         <div className="blog-content">
           <div>

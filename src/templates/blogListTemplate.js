@@ -2,6 +2,7 @@ import { kebabCase } from 'lodash';
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
+import HeaderInterns from "../components/header/index2"
 import Img from 'gatsby-image';
 import SEO from '../components/seo';
 
@@ -19,6 +20,7 @@ const BlogPage = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />
+      <HeaderInterns />
       <div className="container post-list">
         {posts.map(post => (
           <div key={post.node.id} className="post-list-item row">

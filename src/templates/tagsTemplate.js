@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
+import HeaderInterns from "../components/header/index2"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext;
@@ -10,6 +11,7 @@ const Tags = ({ pageContext, data }) => {
   } tagged with "${tag}"`;
   return (
     <Layout>
+      <HeaderInterns />
       <div>
         <h1>{tagHeader}</h1>
         <ul>

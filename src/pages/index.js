@@ -13,6 +13,7 @@ import '../styles/styles.scss';
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+    <Header />
     <StyledBackgroundSection />
     <BlogSection />
     <About />
