@@ -12,7 +12,7 @@ const TagsPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <div>
+      <div className="container pages-interns">>
         <h1>Tags</h1>
         <ul>
           {allTags.map(tag => (

@@ -2,7 +2,7 @@
 title: International Space Station
 date: 2020-02-02
 thumbnail: "../../images/isp.jpg"
-tags: ['cat', 'kitten', 'javascript']
+tags: ['space', 'nasa', 'astronaut']
 ---
 
 Lorem ipsum dolor sit amet,

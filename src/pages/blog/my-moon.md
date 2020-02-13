@@ -2,7 +2,7 @@
 title: My moon
 date: 2019-10-30
 thumbnail: "../../images/moon.jpg"
-tags: ['cat']
+tags: ['space']
 ---
 
 Lorem ipsum dolor sit amet,

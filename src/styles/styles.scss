@@ -27,7 +27,7 @@ body {
   border-width: 0;
 
   &:hover {
-    background-color: rgba(rebeccapurple, 0.2);
+    background-color: rgba($primary, 0.4);
   }
   
 }
@@ -50,7 +50,7 @@ body {
       padding: 5px;
     }
     .active {
-      color: red;
+      color: $gray-text-clean;
     }
   }
 
@@ -228,7 +228,7 @@ body {
 .blog-section {
     
   .blog-container-section {
-      padding: 120px 0 80px 0;
+      padding: 30px 0 80px 0;
   }
   .blog-section-card-link {
     text-decoration:none;
@@ -288,7 +288,7 @@ body {
 
 //----------- Section About us
 .about-us {
-  padding-top: 60px;
+  padding-top: 120px;
 
   .about-us-img {
     border-radius: 12px;
@@ -308,6 +308,29 @@ body {
     color: $gray-text;
     font-size: 1.2rem;
     line-height: 1.8;
+  }
+}
+
+//------------- Interns
+.pages-interns {
+  padding: 30px 10px;
+  margin-top: 150px;
+  background-color: $white;
+}
+.post-list {
+  background-color: $white;
+  margin-top: 150px;
+  padding-top: 30px;
+}
+.post-list-item, .project-list__item {
+  margin-bottom: 50px;
+}
+.page-navigation {
+  display: inline-block;
+  margin-bottom: 30px;
+
+  a {
+    padding: 0 20px;
   }
 }
 

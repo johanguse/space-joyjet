@@ -21,15 +21,15 @@ const BlogPage = ({ data, pageContext }) => {
       <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />
       <div className="container post-list">
         {posts.map(post => (
-          <div key={post.node.id} className="post-list__item">
-            <div className="post-list__thumbnail">
+          <div key={post.node.id} className="post-list-item row">
+            <div className="post-list__thumbnail col-md-4">
               <Link to={post.node.fields.slug}>
                 <Img
                   fixed={post.node.frontmatter.thumbnail.childImageSharp.fixed}
                 />
               </Link>
             </div>
-            <div className="post-list__content">
+            <div className="post-list-content col-md-8">
               <h2>{post.node.frontmatter.title}</h2>
               {post.node.frontmatter.tags ? (
                 <div className="tags-container">

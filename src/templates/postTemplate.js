@@ -12,7 +12,7 @@ const PostTemplate = ({ data }) => {
       <SEO
         title={frontmatter.title}
       />
-      <section className="container">
+      <section className="container pages-interns">
         <div className="blog-content">
           <div>
             <h1>{frontmatter.title}</h1>
