@@ -1,10 +1,5 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://joyjet.com/images/joyjet_logotag-rocket.svg" width="300" />
-  </a>
-</p>
-<h1 align="center">
+<h1 align="left">
   Joyjet tech interview
 </h1>
 
