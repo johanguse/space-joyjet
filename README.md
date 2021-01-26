@@ -5,6 +5,8 @@
 
 This is a test to analyze knowledge in web development, using specifics resources.
 
+The layout specification is [here](https://github.com/johanguse/space-joyjet/blob/master/assets/joyjet-recruitment-web.pdf). 
+
 ## Features
 
 Gatsby
